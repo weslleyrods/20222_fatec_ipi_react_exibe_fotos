@@ -40,12 +40,10 @@ export default class App extends React.Component{
                         <Busca onBuscaRealizada={this.onBuscaRealizada}/>
                     </Card>      
                 </div>
-                <div className="col-12 md:col-8">
+                <div className="col-12 md:col-8 grid justify-content-center">
                     {
                         this.state.pics.map((pic, key)=>(
-                            <div key={pic.id}>
-                                <img src={pic.src.small} alt={pic.alt}/>
-                            </div>    
+                                <img className='m-1' key={pic.id} src={pic.src.small} alt={pic.alt}/>
                         ))
                     }
                 </div>
